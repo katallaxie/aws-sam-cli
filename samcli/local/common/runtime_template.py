@@ -66,6 +66,14 @@ RUNTIME_DEP_TEMPLATE_MAPPING = {
             "build": True,
         },
     ],
+    "dart": [
+        {
+            "runtimes": ["dart"],
+            "dependency_manager": "pub",
+            "init_location": os.path.join(_templates, "cookiecutter-aws-sam-hello-dart-pub"),
+            "build": True,
+        }
+    ]
 }
 
 RUNTIME_TO_DEPENDENCY_MANAGERS = {

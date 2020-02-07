@@ -69,6 +69,13 @@ GO_MOD_CONFIG = CONFIG(
     manifest_name="go.mod",
     executable_search_paths=None)
 
+DART_PUB_CONFIG = CONFIG(
+    language="dart",
+    dependency_manager="pub",
+    application_framework=None,
+    manifest_name="pubspec.yaml",
+    executable_search_paths=None)
+
 
 class UnsupportedRuntimeException(Exception):
     pass
@@ -112,6 +119,7 @@ def get_workflow_config(runtime, code_dir, project_dir):
         "dotnetcore2.0": BasicWorkflowSelector(DOTNET_CLIPACKAGE_CONFIG),
         "dotnetcore2.1": BasicWorkflowSelector(DOTNET_CLIPACKAGE_CONFIG),
         "go1.x": BasicWorkflowSelector(GO_MOD_CONFIG),
+        "dart": BasicWorkflowSelector(DART_PUB_CONFIG),
 
         # When Maven builder exists, add to this list so we can automatically choose a builder based on the supported
         # manifest

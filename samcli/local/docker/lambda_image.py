@@ -33,7 +33,8 @@ class Runtime(Enum):
     go1x = "go1.x"
     dotnetcore20 = "dotnetcore2.0"
     dotnetcore21 = "dotnetcore2.1"
-    provided = "provided"
+    provided = "provided",
+    dart = "dart"
 
     @classmethod
     def has_value(cls, value):
